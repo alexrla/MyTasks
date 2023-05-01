@@ -1,0 +1,19 @@
+<main>
+  <div class="text-center" *ngIf="!showAddTask">
+    <p>Adicionar Tarefa</p>
+    <button (click)="createTask()"><fa-icon [icon]="faPlus"></fa-icon></button>
+  </div>
+  <app-add-task 
+    (addTaskEvent)="addTask($event)"
+    (closeEvent)="close()"
+    *ngIf="showAddTask"
+  >
+  </app-add-task>
+  <app-task 
+    *ngFor="let task of tasks" 
+    [task]="task"
+    (deleteTaskEvent)="deleteTask(task)"
+    (activateReminderEvent)="activateReminder(task)"
+  >
+  </app-task>
+</main>

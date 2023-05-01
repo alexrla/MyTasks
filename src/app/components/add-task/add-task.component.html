@@ -1,0 +1,60 @@
+<div class="card mt-3 mb-4">
+  <div class="card-header">
+    <h4 class="card-title">Adicionar Tarefa</h4>
+  </div>
+  <div class="card-body">
+    <form action="#">
+      <div class="mb-3">
+        <label for="textTask" class="form-label">Tarefa</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          name="textTask" 
+          id="textTask" 
+          placeholder="Informe a tarefa..."
+          aria-describedby="textTaskHelp"
+          [(ngModel)]="textTask"
+        >
+        <div id="textTaskHelp" class="form-text text-danger" *ngIf="textTaskEmpty">Campo obrigatório</div>
+      </div>
+      <div class="mb-3">
+        <label for="horaryTask" class="form-label">Dia e Horário</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          name="horaryTask" 
+          id="horaryTask" 
+          placeholder="Informe o dia e o horário..."
+          aria-describedby="horaryTask"
+          [(ngModel)]="horaryTask"
+        >
+      </div>
+      <div class="mb-3 form-check">
+        <input 
+          type="checkbox" 
+          class="form-check-input" 
+          name="activeReminder" 
+          id="activeReminder"
+          [(ngModel)]="activeReminder"
+        >
+        <label class="form-check-label" for="activeReminder">Ativar lembrete</label>
+      </div>
+    </form>
+  </div>
+  <div class="card-footer text-end">
+    <button
+      type="button"
+      class="btn btn-danger me-3"
+      (click)="close()"
+    >
+      Cancelar
+    </button>
+    <button
+      type="button"
+      class="btn btn-success"
+      (click)="addTask()"
+    >
+      Adicionar
+    </button>
+  </div>
+</div>

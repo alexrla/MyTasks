@@ -1,0 +1,15 @@
+:host {
+  width: 100%;
+}
+
+.container {
+  border: 3px solid #4D4A4A;
+
+  min-height: 80vh;
+
+  width: 500px;
+
+  margin: 30px auto;
+
+  max-width: 90%;
+}

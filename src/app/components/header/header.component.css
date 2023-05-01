@@ -1,0 +1,21 @@
+header {
+  align-items: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  padding: 20px 0 0;
+
+  text-align: center;
+}
+
+.hr {
+  background-color: #000;
+
+  height: 2px;
+
+  width: 80%;
+}

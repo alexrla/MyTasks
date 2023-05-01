@@ -1,0 +1,15 @@
+<section 
+  class="task" 
+  [ngClass]="{ reminder: task.reminder }"
+  (dblclick)="activateReminder(task)"
+>
+  <h5>
+    {{ task.text }} 
+    <fa-icon 
+      (click)="deleteTask(task)" 
+      [icon]="faClose" 
+      [ngStyle]="{color: '#F00'}"
+    ></fa-icon>
+  </h5>
+  <p>{{ task.horary }}</p>
+</section>
